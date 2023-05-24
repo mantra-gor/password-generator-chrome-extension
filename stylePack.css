@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --shadowColor: #7e68b0d2;
+}
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 5px;
+    font-family: 'Lexend', sans-serif;
+    background: linear-gradient(to left,#D3CCE3,#E9E4F0);
+    border: 1.6px dashed black;
+}
+.container{
+    width: 270px;
+    margin: 1rem;
+    padding: 0.4rem;
+
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading{
+    font-size: 1.25rem;
+    text-transform:uppercase;
+    color: #C3B091;
+}
+.display-container{
+    width: 94%;
+    height: 9%;
+    position: relative;
+    padding: 5px;
+    background-color: rgba(245, 245, 245, 0.4);
+    border-radius: 8px;
+    box-shadow: 2px 8px 4px var(--shadowColor);
+    margin: 0.5rem 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.display{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8rem;
+    padding: 8px;
+    outline: none;
+    font-weight: 600;
+    color: #606386;
+}
+.display::placeholder{
+    font-family: 'Lexend', sans-serif;
+    color: #9097c8;
+}
+.copyBtn{
+    background: transparent;
+    border: none;
+    position: absolute;
+    padding-right: 8px;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+}
+.copyBtn:active{
+    scale: 92%;
+}
+.copyMsg{
+    font-family: 'Lexend', sans-serif;
+    position: absolute;
+    top:-90%;
+    right: -0%;
+    font-size: 8px;
+    font-weight: 500;
+    color: white;
+    padding: 3px 4px;
+    background-color: #555D50;
+    border-radius: 1rem;
+    scale: 0;
+    transition: all 250ms linear;
+}
+.active{
+    scale: 1;
+}
+.copy-icon{
+    color: #4D5D53;
+    cursor: pointer;
+}
+.input-container{
+    width: 94%;
+    height: auto;
+    background-color: rgba(245, 245, 245, 0.4);
+    border-radius: 8px;
+    box-shadow: 2px 8px 4px var(--shadowColor);
+    padding: 1.2rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.5rem;
+}
+.length-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #38464d;
+    font-weight: 500;
+}
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.5rem;
+    cursor: pointer;
+    background-color: #b1a4ce87;
+    background-image: linear-gradient(to left, var(--shadowColor),var(--shadowColor));
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+.slider::-webkit-slider-thumb{
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    background-color: #555D50;
+    box-shadow: 2px 2px 10px #C3B091;
+}
+.slider::-webkit-slider-thumb:hover{
+    border: 2px solid #C3B091;
+    box-shadow: 0px 0px 20px #C3B091;
+    background-color: #4e5549;
+    scale: 1.2;
+    transition: all 100ms;
+}
+.strength-container{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-top: 0.4rem;
+}
+.strength-container p{
+    color: #38464d;
+}
+.indicator{
+    width: 14px;
+    height: 14px;
+    background-color: rgb(250, 250, 250);
+    border-radius: 100%;
+    box-shadow: 2px 2px 6px white, -2px -2px 6px white;
+}
+.generateButton{
+    font-family: 'Lexend', sans-serif;
+    width: 100%;
+    height: 36px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-size: 0.725rem;
+    font-weight: 600;
+    color: #38464d;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 2px 8px 4px #C3B091;
+    transition: all 100ms;
+}
+.generateButton:active{
+    scale: 99%;
+    background-color: #efefefe8;
+    box-shadow: 4px 8px 4px #c3b091ca;
+}
+.check{
+    display: flex;
+    align-items: center;
+    gap: 0 0.5rem;
+    margin: 0.5rem 0;
+}
+.check input{
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    position: relative;
+    border: 2px solid #555D50;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.check input:checked{
+    background-color: #555D50;
+}
+.check input:checked::before{
+    content: "✓";
+    position: absolute;
+    left: 50%;
+    top: -3.5px;
+    transform: translate(-50%,10%);
+    color: #efefef;
+    font-size: 0.625rem;
+    font-weight: 600;
+}
+.check label{
+    font-size: 12px;
+}

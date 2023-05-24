@@ -1,0 +1,14 @@
+{
+    "name": "Password Generator",
+    "version": "1.0.0",
+    "description": "It Generates a unique and a strong password",
+    "manifest_version": 3,
+    "author": "Mantra Gor",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "Password Generator"
+    },
+    "icons": {
+        "16": "./asset/favicon.png"
+    }
+}
